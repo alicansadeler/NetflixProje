@@ -4,11 +4,18 @@ import Home from "./pages/Home";
 import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import Header from "./components/Header/Header";
+import { useContext } from "react";
+import {
+  NetflixContext,
+  NetflixContextProvider,
+} from "./context/NetflixContext";
 
 function App() {
+  const { showHeader } = useContext(NetflixContext);
+
   return (
     <>
-      <Header />
+      {showHeader && <Header />}
       <Switch>
         <Route path="/" exact>
           <h1>Welcome to Netflix</h1>
@@ -23,7 +30,6 @@ function App() {
           <Login />
         </Route>
       </Switch>
-
       <div className="link-navigation">
         <Link to="/home">Homepage</Link>
         <Link to="/welcome">Welcome</Link>

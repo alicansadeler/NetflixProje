@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+.link-navigation {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
